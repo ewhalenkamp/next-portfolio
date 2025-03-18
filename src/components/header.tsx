@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./styles/header.module.scss";
 import useScrollDirection from "hooks/useScrollDirection";
-import { useEffect } from "react";
 
 export default function Header({ }) {
     // stateful value from custom hook
