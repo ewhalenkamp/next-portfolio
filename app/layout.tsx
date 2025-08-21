@@ -8,6 +8,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
+                <title>Erik Halenkamp - Portfolio</title>
                 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
             </head>
             <body>{children}</body>

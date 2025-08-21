@@ -5,14 +5,6 @@ body {
     color: white;
     width: 100vw;
     overflow: hidden;
-
-    &.allow-scroll {
-        overflow-y: visible;
-    }
-}
-
-:focus {
-    border: 1px solid white;
 }
 
 button {
@@ -38,6 +30,11 @@ button {
         top: 100%;
         transform: translate(-50%, -100%)
     }
+
+
+    &:focus {
+        border: 1px solid white;
+    }
 }
 
 section {
@@ -61,12 +58,20 @@ section {
             font-weight: 100;
             margin: 0;
             margin-bottom: 5px;
+
+            @media (max-width: 550px) {
+                font-size: 40px;
+            }
         }
 
         h2 {
             font-size: 36px;
             font-weight: 100;
             margin: 0;
+
+            @media (max-width: 550px) {
+                font-size: 20px;
+            }
         }
 
         #hero-imgs {
@@ -86,5 +91,12 @@ section {
 }
 
 #history {
-    height: 200vh;
+    height: auto;
+    min-height: 100vh;
+
+    #timeline {
+        display: flex;
+        justify-content: center;
+        margin: 75px 0;
+    }
 }
