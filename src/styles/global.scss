@@ -1,10 +1,90 @@
 body {
-    background-color: #dce7fa;
-    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #7738EE, #3E1891);
     margin: 0;
+    font-family: 'Montserrat';
+    color: white;
+    width: 100vw;
+    overflow: hidden;
+
+    &.allow-scroll {
+        overflow-y: visible;
+    }
 }
 
-#hero {
-    background: #7738EE;
-    background: linear-gradient(135deg, #7738EE, #3E1891);
+:focus {
+    border: 1px solid white;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+        margin: 0 20px;
+
+        &.down-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.lower-button {
+        top: 100%;
+        transform: translate(-50%, -100%)
+    }
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#home {
+    text-align: center;
+
+    #hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        h1 {
+            font-size: 65px;
+            font-weight: 100;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 100;
+            margin: 0;
+        }
+
+        #hero-imgs {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+            a {
+                margin-right: 35px;
+            }
+
+            a:nth-last-child(1) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+#history {
+    height: 200vh;
 }
